@@ -1,130 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Online Quiz Maker</title>
-
-<style>
-
-body{
-font-family: Arial;
-background:#f4f4f4;
-text-align:center;
-padding:40px;
-}
-
-.quiz-box{
-background:white;
-padding:30px;
-width:400px;
-margin:auto;
-border-radius:10px;
-box-shadow:0 0 10px gray;
-}
-
-button{
-background:blue;
-color:white;
-padding:10px 20px;
-border:none;
-margin-top:15px;
-cursor:pointer;
-}
-
-</style>
-
+<title>Job Board</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<h1>Online Quiz Maker</h1>
+<header>
+<h1>Job Board Website</h1>
 
-<div class="quiz-box">
+<nav>
+<a href="index.html">Home</a>
+<a href="jobs.html">Jobs</a>
+<a href="employer.html">Employer</a>
+<a href="candidate.html">Candidate</a>
+</nav>
+</header>
 
-<h2 id="question">Question will appear here</h2>
+<section class="hero">
 
-<div id="answers"></div>
+<h2>Find Your Dream Job</h2>
+<p>Explore the latest job opportunities.</p>
 
-<button onclick="nextQuestion()">Next Question</button>
+<a class="btn" href="jobs.html">Browse Jobs</a>
 
-<h3 id="result"></h3>
+</section>
 
-</div>
-
-<script>
-
-let quiz = [
-{
-question:"What does HTML stand for?",
-answers:["Hyper Text Markup Language","High Tech Machine Language","Home Tool Markup Language","Hyperlinks Text Machine Language"],
-correct:0
-},
-
-{
-question:"Which language is used for styling websites?",
-answers:["HTML","CSS","Python","Java"],
-correct:1
-},
-
-{
-question:"Which language makes websites interactive?",
-answers:["CSS","HTML","JavaScript","SQL"],
-correct:2
-}
-
-];
-
-let currentQuestion = 0;
-let score = 0;
-
-function loadQuestion(){
-
-let q = quiz[currentQuestion];
-
-document.getElementById("question").innerText = q.question;
-
-let answersHTML = "";
-
-for(let i=0;i<q.answers.length;i++){
-
-answersHTML += `<p>
-<input type="radio" name="answer" value="${i}">
-${q.answers[i]}
-</p>`;
-
-}
-
-document.getElementById("answers").innerHTML = answersHTML;
-
-}
-
-function nextQuestion(){
-
-let selected = document.querySelector('input[name="answer"]:checked');
-
-if(!selected){
-alert("Please select an answer");
-return;
-}
-
-if(selected.value == quiz[currentQuestion].correct){
-score++;
-}
-
-currentQuestion++;
-
-if(currentQuestion < quiz.length){
-loadQuestion();
-}else{
-document.querySelector(".quiz-box").innerHTML =
-`<h2>Quiz Completed</h2>
-<h3>Your Score: ${score} / ${quiz.length}</h3>`;
-}
-
-}
-
-loadQuestion();
-
-</script>
+<footer>
+<p>© 2026 Job Board</p>
+</footer>
 
 </body>
 </html>
