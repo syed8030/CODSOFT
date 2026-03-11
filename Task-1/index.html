@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexaHire — Find Your Dream Job</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Background Orbs -->
+<div class="bg-orbs">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">Nexa<span style="color:var(--cyan);-webkit-text-fill-color:var(--cyan)">Hire</span><span class="dot"></span></a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="jobs.html">Browse Jobs</a></li>
+    <li><a href="employer.html">For Employers</a></li>
+    <li><a href="candidate.html">My Profile</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a href="candidate.html" class="btn btn-ghost btn-sm">Sign In</a>
+    <a href="employer.html" class="btn btn-primary btn-sm">Post a Job</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-badge"><span class="hero-badge-dot"></span> 🚀 Over 12,000 Jobs Live Now</div>
+  <h1>Land Your<br><span class="gradient-text">Dream Career</span><br>Today.</h1>
+  <p>Connect with top companies hiring right now. Discover opportunities that match your skills, passion, and ambition.</p>
+
+  <div class="hero-search" id="heroSearch">
+    <input type="text" placeholder="Job title, skills, or keyword..." id="heroQuery">
+    <div class="search-divider"></div>
+    <input type="text" placeholder="Location or Remote" id="heroLocation" style="max-width:180px;">
+    <button onclick="heroSearch()">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      Search
+    </button>
+  </div>
+
+  <div class="stats-bar animate-on-scroll">
+    <div class="stat-item"><div class="stat-number">12K+</div><div class="stat-label">Active Jobs</div></div>
+    <div class="stat-item"><div class="stat-number">4.8K</div><div class="stat-label">Companies</div></div>
+    <div class="stat-item"><div class="stat-number">98K+</div><div class="stat-label">Candidates</div></div>
+    <div class="stat-item"><div class="stat-number">92%</div><div class="stat-label">Hire Rate</div></div>
+  </div>
+</section>
+
+<!-- Category Chips -->
+<section class="section" style="padding-top: 1rem; padding-bottom: 3rem;">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:1.5rem;">
+      <span class="section-tag">Explore by Category</span>
+    </div>
+    <div class="category-chips" style="justify-content:center;">
+      <span class="chip active" onclick="goToJobs('All')">🌐 All Categories</span>
+      <span class="chip" onclick="goToJobs('Technology')">💻 Technology</span>
+      <span class="chip" onclick="goToJobs('Design')">🎨 Design</span>
+      <span class="chip" onclick="goToJobs('Marketing')">📣 Marketing</span>
+      <span class="chip" onclick="goToJobs('Finance')">💰 Finance</span>
+      <span class="chip" onclick="goToJobs('Healthcare')">🏥 Healthcare</span>
+      <span class="chip" onclick="goToJobs('Education')">📚 Education</span>
+      <span class="chip" onclick="goToJobs('Remote')">🏠 Remote Only</span>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Jobs -->
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <span class="section-tag">Featured Opportunities</span>
+      <h2 class="section-title">Hand-Picked <span class="text-gradient">Top Jobs</span></h2>
+      <p class="section-subtitle">Curated roles from companies with exceptional culture, compensation, and growth.</p>
+    </div>
+    <div class="job-grid" id="featuredJobs"></div>
+    <div style="text-align:center; margin-top:2.5rem;">
+      <a href="jobs.html" class="btn btn-outline btn-lg">View All Jobs →</a>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="section" style="background: rgba(255,255,255,0.02); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <span class="section-tag">Simple Process</span>
+      <h2 class="section-title">How <span class="text-gradient">NexaHire</span> Works</h2>
+      <p class="section-subtitle">From profile to offer in just a few steps — fast, transparent, and hassle-free.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card animate-on-scroll">
+        <div class="step-number">01</div>
+        <span class="step-icon">👤</span>
+        <div class="step-title">Build Your Profile</div>
+        <div class="step-desc">Create a standout candidate profile highlighting your skills, experience, and ambitions.</div>
+      </div>
+      <div class="step-card animate-on-scroll">
+        <div class="step-number">02</div>
+        <span class="step-icon">🔍</span>
+        <div class="step-title">Discover Roles</div>
+        <div class="step-desc">Browse thousands of curated jobs or let our smart algorithm match you with the best fit.</div>
+      </div>
+      <div class="step-card animate-on-scroll">
+        <div class="step-number">03</div>
+        <span class="step-icon">⚡</span>
+        <div class="step-title">Apply Instantly</div>
+        <div class="step-desc">One-click applications with your profile. No re-entering data, no lengthy forms.</div>
+      </div>
+      <div class="step-card animate-on-scroll">
+        <div class="step-number">04</div>
+        <span class="step-icon">🎉</span>
+        <div class="step-title">Land the Job</div>
+        <div class="step-desc">Get hired and take the next step in your career with confidence.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-box animate-on-scroll">
+    <h2>Ready to Launch Your <span class="text-gradient">Career?</span></h2>
+    <p>Join thousands of professionals who found their perfect job through NexaHire. Your next opportunity is one click away.</p>
+    <div class="cta-actions">
+      <a href="jobs.html" class="btn btn-primary btn-lg">Browse All Jobs</a>
+      <a href="employer.html" class="btn btn-outline btn-lg">Post a Job</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo" style="text-decoration:none;">Nexa<span style="color:var(--cyan);-webkit-text-fill-color:var(--cyan)">Hire</span></a>
+      <p>The modern job board connecting ambitious talent with forward-thinking companies worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h4>For Candidates</h4>
+      <ul>
+        <li><a href="jobs.html">Browse Jobs</a></li>
+        <li><a href="candidate.html">My Profile</a></li>
+        <li><a href="#">Career Advice</a></li>
+        <li><a href="#">Resume Tips</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>For Employers</h4>
+      <ul>
+        <li><a href="employer.html">Post a Job</a></li>
+        <li><a href="#">Browse Talent</a></li>
+        <li><a href="#">Pricing Plans</a></li>
+        <li><a href="#">Hire Teams</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 NexaHire. All rights reserved.</span>
+    <span>Built with ❤️ for ambitious people</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  renderFeaturedJobs();
+  initScrollAnimations();
+  initNavbarScroll();
+
+  function heroSearch() {
+    const q = document.getElementById('heroQuery').value;
+    const loc = document.getElementById('heroLocation').value;
+    window.location.href = `jobs.html?q=${encodeURIComponent(q)}&loc=${encodeURIComponent(loc)}`;
+  }
+  document.getElementById('heroQuery').addEventListener('keydown', e => { if(e.key==='Enter') heroSearch(); });
+
+  function goToJobs(cat) {
+    window.location.href = `jobs.html?cat=${encodeURIComponent(cat)}`;
+  }
+</script>
+</body>
+</html>

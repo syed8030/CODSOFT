@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile — NexaHire</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-orbs">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</div>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">Nexa<span style="color:var(--cyan);-webkit-text-fill-color:var(--cyan)">Hire</span><span class="dot"></span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="jobs.html">Browse Jobs</a></li>
+    <li><a href="employer.html">For Employers</a></li>
+    <li><a href="candidate.html" class="active">My Profile</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a href="candidate.html" class="btn btn-ghost btn-sm">Sign In</a>
+    <a href="employer.html" class="btn btn-primary btn-sm">Post a Job</a>
+  </div>
+</nav>
+
+<div class="form-page">
+  <div style="max-width:1000px; margin: 0 auto;">
+
+    <div class="form-header animate-on-scroll">
+      <span class="section-tag">Candidate Dashboard</span>
+      <h1>My <span class="text-gradient">Profile</span></h1>
+      <p>Keep your profile updated to attract the best opportunities and stand out to employers.</p>
+    </div>
+
+    <div class="profile-layout">
+
+      <!-- Sidebar -->
+      <div class="profile-sidebar animate-on-scroll">
+        <div class="profile-card">
+          <div class="profile-avatar" id="avatarDisplay">
+            <div class="avatar-status"></div>
+            SY
+          </div>
+          <div class="profile-name" id="displayName">Syed Ali</div>
+          <div class="profile-title" id="displayTitle">Frontend Developer</div>
+          <div class="stat-pills">
+            <span class="stat-pill">⭐ 4.9 Rating</span>
+            <span class="stat-pill">3 Applied</span>
+          </div>
+          <div class="profile-completion">
+            <div class="completion-label">
+              <span>Profile Completion</span>
+              <span id="completionPct">65%</span>
+            </div>
+            <div class="completion-bar">
+              <div class="completion-fill" id="completionBar" style="width:65%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-card" style="margin-top:0;">
+          <h3>📌 Quick Links</h3>
+          <div style="display:flex; flex-direction:column; gap:0.5rem;">
+            <a href="jobs.html" class="btn btn-ghost btn-sm" style="justify-content:flex-start; gap:0.5rem;">🔍 Browse Jobs</a>
+            <a href="#" class="btn btn-ghost btn-sm" style="justify-content:flex-start; gap:0.5rem;">📋 My Applications</a>
+            <a href="#" class="btn btn-ghost btn-sm" style="justify-content:flex-start; gap:0.5rem;">🔔 Job Alerts</a>
+            <a href="#" class="btn btn-ghost btn-sm" style="justify-content:flex-start; gap:0.5rem;">🔖 Saved Jobs</a>
+          </div>
+        </div>
+
+        <!-- Applied Jobs -->
+        <div class="sidebar-card" style="margin-top:0;">
+          <h3>📬 Recent Applications</h3>
+          <div style="display:flex; flex-direction:column; gap:0.75rem;">
+            <div style="padding:0.75rem; background:var(--bg-primary); border-radius:8px; border:1px solid var(--border);">
+              <div style="font-size:0.82rem; font-weight:700; margin-bottom:0.25rem;">Frontend Developer</div>
+              <div style="font-size:0.75rem; color:var(--text-muted);">TechCorp • 2 days ago</div>
+              <span class="job-badge badge-new" style="margin-top:0.4rem; display:inline-block; font-size:0.65rem;">In Review</span>
+            </div>
+            <div style="padding:0.75rem; background:var(--bg-primary); border-radius:8px; border:1px solid var(--border);">
+              <div style="font-size:0.82rem; font-weight:700; margin-bottom:0.25rem;">UI/UX Designer</div>
+              <div style="font-size:0.75rem; color:var(--text-muted);">DesignHub • 1 week ago</div>
+              <span class="job-badge badge-featured" style="margin-top:0.4rem; display:inline-block; font-size:0.65rem;">Shortlisted</span>
+            </div>
+            <div style="padding:0.75rem; background:var(--bg-primary); border-radius:8px; border:1px solid var(--border);">
+              <div style="font-size:0.82rem; font-weight:700; margin-bottom:0.25rem;">Data Analyst</div>
+              <div style="font-size:0.75rem; color:var(--text-muted);">DataWorks • 2 weeks ago</div>
+              <span class="job-badge badge-remote" style="margin-top:0.4rem; display:inline-block; font-size:0.65rem;">Applied</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Form -->
+      <div>
+        <div class="form-card animate-on-scroll">
+
+          <!-- Personal Info -->
+          <div class="form-section-title">👤 Personal Information</div>
+          <div class="form-row two-col">
+            <div class="form-group">
+              <label>First Name *</label>
+              <input class="form-control" type="text" id="firstName" placeholder="Your first name" value="Syed" oninput="updateProfile()">
+            </div>
+            <div class="form-group">
+              <label>Last Name *</label>
+              <input class="form-control" type="text" id="lastName" placeholder="Your last name" value="Ali" oninput="updateProfile()">
+            </div>
+          </div>
+          <div class="form-row two-col">
+            <div class="form-group">
+              <label>Email Address *</label>
+              <input class="form-control" type="email" id="emailField" placeholder="your@email.com" value="syed@email.com">
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input class="form-control" type="tel" id="phoneField" placeholder="+1 (555) 000-0000">
+            </div>
+          </div>
+          <div class="form-row two-col">
+            <div class="form-group">
+              <label>Location</label>
+              <input class="form-control" type="text" id="locationField" placeholder="City, Country" value="Bengaluru, India">
+            </div>
+            <div class="form-group">
+              <label>Job Title / Role</label>
+              <input class="form-control" type="text" id="titleField" placeholder="e.g. Frontend Developer" value="Frontend Developer" oninput="updateProfile()">
+            </div>
+          </div>
+          <div class="form-group form-row">
+            <label>Professional Bio</label>
+            <textarea class="form-control" id="bioField" placeholder="Tell employers about yourself, your passion, and what you're looking for...">Passionate frontend developer with 3 years of experience building beautiful, performant web applications. Skilled in React, JavaScript, and modern CSS frameworks. Looking for remote-first opportunities at product-led companies.</textarea>
+          </div>
+
+          <!-- Links -->
+          <div class="form-section-title">🔗 Online Presence</div>
+          <div class="form-row two-col">
+            <div class="form-group">
+              <label>LinkedIn Profile</label>
+              <input class="form-control" type="url" id="linkedinField" placeholder="https://linkedin.com/in/yourname">
+            </div>
+            <div class="form-group">
+              <label>GitHub / Portfolio</label>
+              <input class="form-control" type="url" id="portfolioField" placeholder="https://yourportfolio.com">
+            </div>
+          </div>
+
+          <!-- Experience -->
+          <div class="form-section-title">💼 Experience & Education</div>
+          <div class="form-row two-col">
+            <div class="form-group">
+              <label>Years of Experience</label>
+              <select class="form-control" id="expField">
+                <option value="">Select...</option>
+                <option>Less than 1 year</option>
+                <option selected>1–3 years</option>
+                <option>3–5 years</option>
+                <option>5–10 years</option>
+                <option>10+ years</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Highest Education</label>
+              <select class="form-control" id="eduField">
+                <option>High School</option>
+                <option>Diploma</option>
+                <option selected>Bachelor's Degree</option>
+                <option>Master's Degree</option>
+                <option>PhD</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row two-col">
+            <div class="form-group">
+              <label>Current / Last Company</label>
+              <input class="form-control" type="text" placeholder="e.g. Infosys" id="lastCompany">
+            </div>
+            <div class="form-group">
+              <label>Expected Salary</label>
+              <input class="form-control" type="text" placeholder="e.g. $80,000/yr or Open to offers" id="salaryExpect">
+            </div>
+          </div>
+
+          <!-- Skills -->
+          <div class="form-section-title">🛠️ Skills</div>
+          <div class="form-group form-row">
+            <label>Add Skills (press Enter)</label>
+            <input class="form-control" type="text" id="candidateSkillInput" placeholder="e.g. React, JavaScript, Figma..." onkeydown="addCandidateSkill(event)">
+            <div class="skill-tags" id="candidateSkillTags" style="margin-top:0.75rem;"></div>
+          </div>
+
+          <!-- Job Preferences -->
+          <div class="form-section-title">🎯 Job Preferences</div>
+          <div class="form-row two-col">
+            <div class="form-group">
+              <label>Preferred Job Type</label>
+              <select class="form-control" id="prefType">
+                <option>Full-time</option>
+                <option>Part-time</option>
+                <option>Contract</option>
+                <option>Internship</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Work Preference</label>
+              <select class="form-control" id="prefWork">
+                <option>Remote Only</option>
+                <option>Hybrid</option>
+                <option>On-site</option>
+                <option>Flexible</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Resume Upload -->
+          <div class="form-section-title">📄 Resume</div>
+          <div style="background:rgba(255,255,255,0.04); border:2px dashed var(--border); border-radius:12px; padding:2rem; text-align:center; cursor:pointer; transition:var(--transition);"
+               onmouseenter="this.style.borderColor='var(--primary)'"
+               onmouseleave="this.style.borderColor='var(--border)'"
+               onclick="document.getElementById('resumeUpload').click()">
+            <div style="font-size:2rem; margin-bottom:0.5rem;">📄</div>
+            <div style="font-weight:600; margin-bottom:0.25rem;">Upload Resume / CV</div>
+            <div style="font-size:0.82rem; color:var(--text-muted);">PDF, DOC, DOCX — Max 5MB</div>
+            <input type="file" id="resumeUpload" style="display:none;" accept=".pdf,.doc,.docx" onchange="resumeSelected(this)">
+          </div>
+          <div id="resumeFileName" style="font-size:0.82rem; color:var(--green); margin-top:0.5rem; display:none;"></div>
+
+          <!-- Submit -->
+          <div style="display:flex; gap:0.75rem; margin-top:2rem; flex-wrap:wrap;">
+            <button class="btn btn-primary btn-lg" onclick="saveProfile()" style="flex:1; min-width:200px; justify-content:center;">
+              💾 Save Profile
+            </button>
+            <button class="btn btn-outline" onclick="previewProfile()">👁️ Preview</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast">
+  <span class="toast-icon">✓</span>
+  <span id="toastMsg">Profile saved!</span>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo" style="text-decoration:none;">Nexa<span style="color:var(--cyan);-webkit-text-fill-color:var(--cyan)">Hire</span></a>
+      <p>The modern job board connecting ambitious talent with forward-thinking companies worldwide.</p>
+    </div>
+    <div class="footer-col"><h4>For Candidates</h4><ul><li><a href="jobs.html">Browse Jobs</a></li><li><a href="candidate.html">My Profile</a></li></ul></div>
+    <div class="footer-col"><h4>For Employers</h4><ul><li><a href="employer.html">Post a Job</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="#">About Us</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 NexaHire. All rights reserved.</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  initScrollAnimations();
+  initNavbarScroll();
+
+  let candidateSkills = ['React', 'JavaScript', 'HTML5', 'CSS3', 'Git'];
+  renderCandidateSkills();
+
+  function addCandidateSkill(e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      const val = document.getElementById('candidateSkillInput').value.trim();
+      if (val && !candidateSkills.includes(val)) {
+        candidateSkills.push(val);
+        renderCandidateSkills();
+        document.getElementById('candidateSkillInput').value = '';
+        updateCompletion();
+      }
+    }
+  }
+
+  function renderCandidateSkills() {
+    const container = document.getElementById('candidateSkillTags');
+    container.innerHTML = candidateSkills.map((s, i) => `
+      <span class="skill-tag">${s} <span class="remove" onclick="removeCandidateSkill(${i})">✕</span></span>
+    `).join('');
+  }
+
+  function removeCandidateSkill(i) {
+    candidateSkills.splice(i, 1);
+    renderCandidateSkills();
+  }
+
+  function updateProfile() {
+    const first = document.getElementById('firstName').value || 'User';
+    const last = document.getElementById('lastName').value || '';
+    const title = document.getElementById('titleField').value || 'Professional';
+    document.getElementById('displayName').textContent = first + ' ' + last;
+    document.getElementById('displayTitle').textContent = title;
+    const initials = (first[0] || '') + (last[0] || '');
+    document.getElementById('avatarDisplay').childNodes[0].textContent = '';
+    document.getElementById('avatarDisplay').innerHTML = `<div class="avatar-status"></div>${initials.toUpperCase()}`;
+    updateCompletion();
+  }
+
+  function updateCompletion() {
+    const fields = ['firstName','lastName','emailField','phoneField','locationField','titleField','bioField','linkedinField','portfolioField'];
+    const filled = fields.filter(id => document.getElementById(id)?.value?.trim()).length;
+    const skillBonus = candidateSkills.length > 0 ? 1 : 0;
+    const pct = Math.round(((filled + skillBonus) / (fields.length + 1)) * 100);
+    document.getElementById('completionPct').textContent = pct + '%';
+    document.getElementById('completionBar').style.width = pct + '%';
+  }
+
+  function saveProfile() {
+    showToast('Profile saved successfully! ✓', 'var(--green)');
+    updateCompletion();
+  }
+
+  function previewProfile() {
+    showToast('Preview feature coming soon!', 'var(--cyan)');
+  }
+
+  function resumeSelected(input) {
+    if (input.files && input.files[0]) {
+      const el = document.getElementById('resumeFileName');
+      el.textContent = '✓ ' + input.files[0].name + ' uploaded';
+      el.style.display = 'block';
+      updateCompletion();
+    }
+  }
+
+  updateCompletion();
+</script>
+</body>
+</html>

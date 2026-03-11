@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Detail — NexaHire</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-orbs">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</div>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">Nexa<span style="color:var(--cyan);-webkit-text-fill-color:var(--cyan)">Hire</span><span class="dot"></span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="jobs.html" class="active">Browse Jobs</a></li>
+    <li><a href="employer.html">For Employers</a></li>
+    <li><a href="candidate.html">My Profile</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a href="candidate.html" class="btn btn-ghost btn-sm">Sign In</a>
+    <a href="employer.html" class="btn btn-primary btn-sm">Post a Job</a>
+  </div>
+</nav>
+
+<div class="job-detail-page">
+
+  <!-- Back -->
+  <div style="max-width:1100px; margin: 0 auto 1.5rem;">
+    <a href="jobs.html" class="btn btn-ghost btn-sm">
+      ← Back to Jobs
+    </a>
+  </div>
+
+  <div class="job-detail-layout animate-on-scroll">
+
+    <!-- Main -->
+    <div class="job-detail-main">
+
+      <div class="job-detail-header">
+        <div class="company-logo-lg" id="detailLogo">TC</div>
+        <div>
+          <h1 class="job-detail-title" id="detailTitle">Frontend Developer</h1>
+          <div class="job-detail-company">
+            <span id="detailCompany">TechCorp</span>
+            <span class="verified-badge">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Verified
+            </span>
+          </div>
+          <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+            <span class="job-badge badge-featured">Featured</span>
+            <span class="job-badge badge-remote" id="detailTypeBadge">Remote</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="job-detail-meta">
+        <div class="meta-item">
+          <span class="meta-icon">📍</span>
+          <span id="detailLocation">Remote / Worldwide</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-icon">💼</span>
+          <span id="detailType">Full-time</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-icon">💰</span>
+          <span id="detailSalary">$90,000 – $130,000</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-icon">🏢</span>
+          <span id="detailDept">Engineering</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-icon">⏰</span>
+          <span id="detailPosted">Posted 2 days ago</span>
+        </div>
+      </div>
+
+      <!-- About Role -->
+      <div class="detail-section">
+        <h3>About the Role</h3>
+        <p id="detailDesc">
+          We are looking for a talented and passionate Frontend Developer to join our growing engineering team at TechCorp. You'll work closely with our design and product teams to build beautiful, high-performance web applications used by millions of users worldwide.
+          <br><br>
+          This is an exciting opportunity to work on cutting-edge technology in a fast-paced, collaborative environment. We believe in shipping fast, learning quickly, and building products our users love.
+        </p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Requirements -->
+      <div class="detail-section">
+        <h3>Requirements</h3>
+        <ul class="requirement-list" id="detailRequirements">
+          <li><span class="req-check">✓</span> 3+ years of experience with HTML, CSS, and JavaScript</li>
+          <li><span class="req-check">✓</span> Proficiency with React.js or Vue.js frameworks</li>
+          <li><span class="req-check">✓</span> Strong understanding of responsive design and cross-browser compatibility</li>
+          <li><span class="req-check">✓</span> Experience with RESTful APIs and asynchronous programming</li>
+          <li><span class="req-check">✓</span> Familiarity with Git and version control workflows</li>
+          <li><span class="req-check">✓</span> Excellent communication and collaboration skills</li>
+        </ul>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Nice to Have -->
+      <div class="detail-section">
+        <h3>Nice to Have</h3>
+        <ul class="requirement-list">
+          <li><span class="req-check" style="color:var(--cyan)">+</span> Experience with TypeScript</li>
+          <li><span class="req-check" style="color:var(--cyan)">+</span> Knowledge of Web Performance Optimization techniques</li>
+          <li><span class="req-check" style="color:var(--cyan)">+</span> Familiarity with CI/CD pipelines</li>
+          <li><span class="req-check" style="color:var(--cyan)">+</span> Experience working in Agile/Scrum teams</li>
+        </ul>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Skills -->
+      <div class="detail-section">
+        <h3>Skills & Technologies</h3>
+        <div class="skill-tags" style="margin-top:0;">
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">HTML5</span>
+          <span class="skill-tag">CSS3</span>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">REST APIs</span>
+          <span class="skill-tag">Figma</span>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Benefits -->
+      <div class="detail-section">
+        <h3>Perks & Benefits</h3>
+        <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap:0.75rem; margin-top:0.5rem;">
+          <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:10px; padding:1rem; font-size:0.88rem; color:var(--text-secondary);">
+            🏠 <strong style="color:var(--text-primary)">Remote First</strong><br>Work from anywhere
+          </div>
+          <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:10px; padding:1rem; font-size:0.88rem; color:var(--text-secondary);">
+            🏥 <strong style="color:var(--text-primary)">Health Coverage</strong><br>Full medical & dental
+          </div>
+          <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:10px; padding:1rem; font-size:0.88rem; color:var(--text-secondary);">
+            📈 <strong style="color:var(--text-primary)">Stock Options</strong><br>Company equity plan
+          </div>
+          <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:10px; padding:1rem; font-size:0.88rem; color:var(--text-secondary);">
+            🎓 <strong style="color:var(--text-primary)">Learning Budget</strong><br>$2,000/year education
+          </div>
+          <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:10px; padding:1rem; font-size:0.88rem; color:var(--text-secondary);">
+            🌴 <strong style="color:var(--text-primary)">Unlimited PTO</strong><br>Rest & recharge
+          </div>
+          <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:10px; padding:1rem; font-size:0.88rem; color:var(--text-secondary);">
+            💻 <strong style="color:var(--text-primary)">Tech Stipend</strong><br>$1,500 home office
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div class="job-detail-sidebar">
+      <div class="sidebar-card">
+        <h3>Apply for This Role</h3>
+        <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:1.25rem; line-height:1.6;">Join TechCorp and work on products used by millions. Applications reviewed within 3 business days.</p>
+        <button class="btn btn-primary" style="width:100%; justify-content:center; margin-bottom:0.75rem; font-size:1rem; padding:0.9rem;" onclick="openModal()">
+          ⚡ Apply Now
+        </button>
+        <button class="btn btn-ghost" style="width:100%; justify-content:center;" onclick="saveJob(this)">
+          🔖 Save Job
+        </button>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Job Overview</h3>
+        <div class="overview-item">
+          <span class="overview-label">Posted</span>
+          <span class="overview-value">2 days ago</span>
+        </div>
+        <div class="overview-item">
+          <span class="overview-label">Deadline</span>
+          <span class="overview-value">Apr 15, 2026</span>
+        </div>
+        <div class="overview-item">
+          <span class="overview-label">Salary</span>
+          <span class="overview-value" style="color:var(--primary)">$90K–$130K</span>
+        </div>
+        <div class="overview-item">
+          <span class="overview-label">Job Type</span>
+          <span class="overview-value">Full-time</span>
+        </div>
+        <div class="overview-item">
+          <span class="overview-label">Experience</span>
+          <span class="overview-value">3–5 Years</span>
+        </div>
+        <div class="overview-item">
+          <span class="overview-label">Location</span>
+          <span class="overview-value">Remote</span>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>About TechCorp</h3>
+        <p style="font-size:0.85rem; color:var(--text-secondary); line-height:1.6; margin-bottom:1rem;">TechCorp is a leading SaaS company building the future of enterprise software. 500+ employees across 30 countries.</p>
+        <div style="display:flex; flex-direction:column; gap:0.5rem;">
+          <div class="meta-item"><span>🌐</span> techcorp.io</div>
+          <div class="meta-item"><span>👥</span> 500–1000 employees</div>
+          <div class="meta-item"><span>🏢</span> San Francisco, CA</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Apply Modal -->
+<div class="modal-overlay" id="applyModal">
+  <div class="modal">
+    <div id="modalForm">
+      <div class="modal-header">
+        <h2 class="modal-title">Apply — Frontend Developer</h2>
+        <button class="modal-close" onclick="closeModal()">✕</button>
+      </div>
+      <div class="form-group" style="margin-bottom:1rem;">
+        <label>Full Name *</label>
+        <input class="form-control" type="text" placeholder="Your full name" id="applyName">
+      </div>
+      <div class="form-group" style="margin-bottom:1rem;">
+        <label>Email Address *</label>
+        <input class="form-control" type="email" placeholder="your@email.com" id="applyEmail">
+      </div>
+      <div class="form-group" style="margin-bottom:1rem;">
+        <label>Phone Number</label>
+        <input class="form-control" type="tel" placeholder="+1 (555) 000-0000" id="applyPhone">
+      </div>
+      <div class="form-group" style="margin-bottom:1rem;">
+        <label>LinkedIn / Portfolio URL</label>
+        <input class="form-control" type="url" placeholder="https://yourportfolio.com" id="applyPortfolio">
+      </div>
+      <div class="form-group" style="margin-bottom:1rem;">
+        <label>Cover Letter</label>
+        <textarea class="form-control" style="min-height:100px;" placeholder="Tell us why you're a great fit..." id="applyCover"></textarea>
+      </div>
+      <div class="form-group" style="margin-bottom:1.5rem;">
+        <label>Resume / CV</label>
+        <div style="background:rgba(255,255,255,0.04); border:2px dashed var(--border); border-radius:10px; padding:1.5rem; text-align:center; font-size:0.85rem; color:var(--text-muted); cursor:pointer;" onclick="document.getElementById('resumeFile').click()">
+          📄 Click to upload resume (PDF, DOC)
+          <input type="file" id="resumeFile" style="display:none;" accept=".pdf,.doc,.docx">
+        </div>
+      </div>
+      <button class="btn btn-primary" style="width:100%; justify-content:center; font-size:1rem; padding:0.9rem;" onclick="submitApplication()">
+        Submit Application →
+      </button>
+    </div>
+    <div class="success-state" id="successState">
+      <div class="success-icon">✓</div>
+      <h3>Application Submitted!</h3>
+      <p>We've received your application for the Frontend Developer role at TechCorp. You'll hear back within 3 business days.</p>
+      <button class="btn btn-outline" style="margin-top:1.5rem;" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast">
+  <span class="toast-icon">✓</span>
+  <span id="toastMsg">Job saved to your list!</span>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo" style="text-decoration:none;">Nexa<span style="color:var(--cyan);-webkit-text-fill-color:var(--cyan)">Hire</span></a>
+      <p>The modern job board connecting ambitious talent with forward-thinking companies worldwide.</p>
+    </div>
+    <div class="footer-col"><h4>For Candidates</h4><ul><li><a href="jobs.html">Browse Jobs</a></li><li><a href="candidate.html">My Profile</a></li></ul></div>
+    <div class="footer-col"><h4>For Employers</h4><ul><li><a href="employer.html">Post a Job</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="#">About Us</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 NexaHire. All rights reserved.</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  initScrollAnimations();
+  initNavbarScroll();
+
+  // Read job from URL if passed
+  const params = new URLSearchParams(window.location.search);
+  const jobId = params.get('id');
+  if (jobId !== null) {
+    const job = ALL_JOBS[parseInt(jobId)];
+    if (job) {
+      document.title = `${job.title} at ${job.company} — NexaHire`;
+      document.getElementById('detailTitle').textContent = job.title;
+      document.getElementById('detailCompany').textContent = job.company;
+      document.getElementById('detailLocation').textContent = job.location;
+      document.getElementById('detailSalary').textContent = job.salary;
+      document.getElementById('detailType').textContent = job.type;
+      document.getElementById('detailPosted').textContent = job.posted;
+      document.getElementById('detailLogo').textContent = job.logo;
+      document.getElementById('detailTypeBadge').textContent = job.type;
+      document.querySelector('.modal-title').textContent = `Apply — ${job.title}`;
+      document.getElementById('applyModal').querySelector('.modal-header h2').textContent = `Apply — ${job.title}`;
+    }
+  }
+
+  function openModal() {
+    document.getElementById('applyModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    document.getElementById('applyModal').classList.remove('active');
+    document.body.style.overflow = '';
+    setTimeout(() => {
+      document.getElementById('modalForm').style.display = 'block';
+      document.getElementById('successState').style.display = 'none';
+    }, 300);
+  }
+  function submitApplication() {
+    const name = document.getElementById('applyName').value.trim();
+    const email = document.getElementById('applyEmail').value.trim();
+    if (!name || !email) {
+      showToast('Please fill in required fields.', '#ef4444');
+      return;
+    }
+    document.getElementById('modalForm').style.display = 'none';
+    document.getElementById('successState').style.display = 'block';
+  }
+  function saveJob(btn) {
+    btn.textContent = '✅ Saved!';
+    btn.disabled = true;
+    showToast('Job saved to your profile!', 'var(--green)');
+  }
+  document.getElementById('applyModal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+</script>
+</body>
+</html>

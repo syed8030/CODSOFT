@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post a Job — NexaHire</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-orbs">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</div>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">Nexa<span style="color:var(--cyan);-webkit-text-fill-color:var(--cyan)">Hire</span><span class="dot"></span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="jobs.html">Browse Jobs</a></li>
+    <li><a href="employer.html" class="active">For Employers</a></li>
+    <li><a href="candidate.html">My Profile</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a href="candidate.html" class="btn btn-ghost btn-sm">Sign In</a>
+    <a href="employer.html" class="btn btn-primary btn-sm">Post a Job</a>
+  </div>
+</nav>
+
+<div class="form-page">
+  <div class="form-container">
+
+    <div class="form-header animate-on-scroll">
+      <span class="section-tag">For Employers</span>
+      <h1>Post a <span class="text-gradient">Job</span></h1>
+      <p>Reach thousands of qualified candidates. Fill your open roles in days, not months.</p>
+    </div>
+
+    <!-- Perks Row -->
+    <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:2rem;" class="animate-on-scroll">
+      <div style="flex:1; min-width:140px; background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:1rem; text-align:center; font-size:0.82rem; color:var(--text-secondary);">
+        ⚡ <strong style="display:block; color:var(--text-primary); font-size:1rem;">Fast</strong>Go live in minutes
+      </div>
+      <div style="flex:1; min-width:140px; background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:1rem; text-align:center; font-size:0.82rem; color:var(--text-secondary);">
+        🎯 <strong style="display:block; color:var(--text-primary); font-size:1rem;">Targeted</strong>Reach right talent
+      </div>
+      <div style="flex:1; min-width:140px; background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:1rem; text-align:center; font-size:0.82rem; color:var(--text-secondary);">
+        📊 <strong style="display:block; color:var(--text-primary); font-size:1rem;">Analytics</strong>Track applicants
+      </div>
+    </div>
+
+    <div class="form-card animate-on-scroll" id="postForm">
+      <!-- Company Info -->
+      <div class="form-section-title">🏢 Company Information</div>
+      <div class="form-row two-col">
+        <div class="form-group">
+          <label>Company Name *</label>
+          <input class="form-control" type="text" placeholder="e.g. TechCorp Inc." id="companyName">
+        </div>
+        <div class="form-group">
+          <label>Company Website</label>
+          <input class="form-control" type="url" placeholder="https://yourcompany.com" id="companyWeb">
+        </div>
+      </div>
+      <div class="form-row two-col">
+        <div class="form-group">
+          <label>Industry *</label>
+          <select class="form-control" id="companyIndustry">
+            <option value="">Select industry...</option>
+            <option>Technology</option>
+            <option>Finance</option>
+            <option>Healthcare</option>
+            <option>Education</option>
+            <option>Marketing</option>
+            <option>Design</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Company Size</label>
+          <select class="form-control" id="companySize">
+            <option value="">Select size...</option>
+            <option>1–10</option>
+            <option>11–50</option>
+            <option>51–200</option>
+            <option>200–1000</option>
+            <option>1000+</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group form-row">
+        <label>Company Description</label>
+        <textarea class="form-control" id="companyDesc" placeholder="Tell candidates about your company culture, mission, and values..."></textarea>
+      </div>
+
+      <!-- Job Details -->
+      <div class="form-section-title">💼 Job Details</div>
+      <div class="form-group form-row">
+        <label>Job Title *</label>
+        <input class="form-control" type="text" placeholder="e.g. Senior Frontend Developer" id="jobTitle">
+      </div>
+      <div class="form-row two-col">
+        <div class="form-group">
+          <label>Department</label>
+          <input class="form-control" type="text" placeholder="e.g. Engineering" id="dept">
+        </div>
+        <div class="form-group">
+          <label>Job Type *</label>
+          <select class="form-control" id="jobType">
+            <option value="">Select type...</option>
+            <option>Full-time</option>
+            <option>Part-time</option>
+            <option>Contract</option>
+            <option>Internship</option>
+            <option>Freelance</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row two-col">
+        <div class="form-group">
+          <label>Location *</label>
+          <input class="form-control" type="text" placeholder="e.g. Remote, New York, London" id="jobLocation">
+        </div>
+        <div class="form-group">
+          <label>Experience Level</label>
+          <select class="form-control" id="expLevel">
+            <option value="">Select level...</option>
+            <option>Entry Level (0–1 yrs)</option>
+            <option>Junior (1–3 yrs)</option>
+            <option>Mid-level (3–5 yrs)</option>
+            <option>Senior (5+ yrs)</option>
+            <option>Lead / Manager</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row two-col">
+        <div class="form-group">
+          <label>Salary Range (Min)</label>
+          <input class="form-control" type="number" placeholder="e.g. 80000" id="salaryMin">
+        </div>
+        <div class="form-group">
+          <label>Salary Range (Max)</label>
+          <input class="form-control" type="number" placeholder="e.g. 120000" id="salaryMax">
+        </div>
+      </div>
+
+      <!-- Job Description -->
+      <div class="form-section-title">📝 Job Description</div>
+      <div class="form-group form-row">
+        <label>About the Role *</label>
+        <textarea class="form-control" id="jobDesc" style="min-height:150px;" placeholder="Describe the role, responsibilities, and what makes it exciting..."></textarea>
+      </div>
+      <div class="form-group form-row">
+        <label>Requirements *</label>
+        <textarea class="form-control" id="jobReqs" style="min-height:120px;" placeholder="List the key requirements, skills, and qualifications..."></textarea>
+      </div>
+      <div class="form-group form-row">
+        <label>Benefits & Perks</label>
+        <textarea class="form-control" id="jobBenefits" placeholder="Health insurance, remote work, stock options, learning budget..."></textarea>
+      </div>
+
+      <!-- Skills -->
+      <div class="form-section-title">🛠️ Required Skills</div>
+      <div class="form-group form-row">
+        <label>Add Skills (press Enter)</label>
+        <input class="form-control" type="text" id="skillInput" placeholder="e.g. React, Python, Figma..." onkeydown="addSkill(event)">
+        <div class="skill-tags" id="skillTagsContainer" style="margin-top:0.75rem;"></div>
+      </div>
+
+      <!-- Application -->
+      <div class="form-section-title">📬 Application Settings</div>
+      <div class="form-row two-col">
+        <div class="form-group">
+          <label>Application Deadline</label>
+          <input class="form-control" type="date" id="deadline">
+        </div>
+        <div class="form-group">
+          <label>Contact Email *</label>
+          <input class="form-control" type="email" placeholder="hr@yourcompany.com" id="contactEmail">
+        </div>
+      </div>
+
+      <div style="display:flex; gap:0.75rem; margin-top:1.5rem; flex-wrap:wrap;">
+        <button class="btn btn-primary btn-lg" onclick="submitJob()" style="flex:1; min-width:200px; justify-content:center;">
+          🚀 Post Job Listing
+        </button>
+        <button class="btn btn-outline" onclick="resetForm()">Reset</button>
+      </div>
+    </div>
+
+    <!-- Success State -->
+    <div class="form-card" id="successCard" style="display:none;">
+      <div class="success-state" style="display:block;">
+        <div class="success-icon">✓</div>
+        <h3>Job Posted Successfully!</h3>
+        <p style="margin-top:0.5rem;">Your job listing is now live and visible to thousands of qualified candidates.</p>
+        <div style="display:flex; gap:0.75rem; justify-content:center; margin-top:1.5rem; flex-wrap:wrap;">
+          <a href="jobs.html" class="btn btn-primary">View All Listings</a>
+          <button class="btn btn-outline" onclick="postAnother()">Post Another Job</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast">
+  <span class="toast-icon">⚠️</span>
+  <span id="toastMsg">Please fill required fields</span>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo" style="text-decoration:none;">Nexa<span style="color:var(--cyan);-webkit-text-fill-color:var(--cyan)">Hire</span></a>
+      <p>The modern job board connecting ambitious talent with forward-thinking companies worldwide.</p>
+    </div>
+    <div class="footer-col"><h4>For Candidates</h4><ul><li><a href="jobs.html">Browse Jobs</a></li><li><a href="candidate.html">My Profile</a></li></ul></div>
+    <div class="footer-col"><h4>For Employers</h4><ul><li><a href="employer.html">Post a Job</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="#">About Us</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 NexaHire. All rights reserved.</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  initScrollAnimations();
+  initNavbarScroll();
+
+  let skills = [];
+
+  function addSkill(e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      const val = document.getElementById('skillInput').value.trim();
+      if (val && !skills.includes(val)) {
+        skills.push(val);
+        renderSkills();
+        document.getElementById('skillInput').value = '';
+      }
+    }
+  }
+
+  function renderSkills() {
+    const container = document.getElementById('skillTagsContainer');
+    container.innerHTML = skills.map((s, i) => `
+      <span class="skill-tag">${s} <span class="remove" onclick="removeSkill(${i})">✕</span></span>
+    `).join('');
+  }
+
+  function removeSkill(i) {
+    skills.splice(i, 1);
+    renderSkills();
+  }
+
+  function submitJob() {
+    const required = ['companyName', 'jobTitle', 'jobType', 'jobLocation', 'jobDesc', 'jobReqs', 'contactEmail'];
+    for (const id of required) {
+      if (!document.getElementById(id).value.trim()) {
+        showToast('Please fill in all required fields (*)', '#ef4444');
+        document.getElementById(id).focus();
+        return;
+      }
+    }
+    document.getElementById('postForm').style.display = 'none';
+    document.getElementById('successCard').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function resetForm() {
+    document.querySelectorAll('.form-control').forEach(el => el.value = '');
+    skills = [];
+    renderSkills();
+  }
+
+  function postAnother() {
+    document.getElementById('postForm').style.display = 'block';
+    document.getElementById('successCard').style.display = 'none';
+    resetForm();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
